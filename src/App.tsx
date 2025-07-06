@@ -1,6 +1,9 @@
 // src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import AboutPage from "./pages/About";
+import Packages from "./pages/packages";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -8,6 +11,12 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/packages" element={<Packages />} />
+          <Route path="/portfolio" element={<div>Portfolio Page</div>} />
+          <Route path="/blog" element={<div>Blog Page</div>} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </div>
     </Router>
